@@ -22,6 +22,7 @@ void USART_IrqHandler (UART_HandleTypeDef *huart, DMA_HandleTypeDef *hdma);
 the above irq handler is called whenever there is the data in DMA_RX_Buffer and idle line is detected where we can write a user defined callback the data processing.
 
 hdma->Instance->CR &= ~DMA_SxCR_EN;       /* idle line detection */
+
 after the above statement user can write his own callback.
 
 void DMA_IrqHandler (DMA_HandleTypeDef *hdma)
