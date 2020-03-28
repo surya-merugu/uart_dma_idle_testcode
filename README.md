@@ -1,4 +1,4 @@
-#PROBLEMS AND SOLUTIONS
+# PROBLEMS AND SOLUTIONS
 
 
 #define DMA_RX_BUFFER_SIZE          64
@@ -13,7 +13,7 @@ uint8_t UART_Buffer[UART_BUFFER_SIZE];
 The UART buffer size can vary according to the user requirement but must be greater than twice of the DMA buffer is preferrable.
 
 
-#USER DEFINED FILES AND CALLBACKS
+# USER DEFINED FILES AND CALLBACKS
 
 There are 2 user defined irqhandlers which must be replaced with the hal usart and dma irqhandlers
 
