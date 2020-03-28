@@ -17,15 +17,15 @@ The UART buffer size can vary according to the user requirement but must be grea
 
 There are 2 user defined irqhandlers which must be replaced with the hal usart and dma irqhandlers
 
-void USART_IrqHandler (UART_HandleTypeDef *huart, DMA_HandleTypeDef *hdma);
+>>void USART_IrqHandler (UART_HandleTypeDef *huart, DMA_HandleTypeDef *hdma);
 
 the above irq handler is called whenever there is the data in DMA_RX_Buffer and idle line is detected where we can write a user defined callback the data processing.
 
-hdma->Instance->CR &= ~DMA_SxCR_EN;       /* idle line detection */
+>>hdma->Instance->CR &= ~DMA_SxCR_EN;       /* idle line detection */
 
 after the above statement user can write his own callback.
 
-void DMA_IrqHandler (DMA_HandleTypeDef *hdma)
+>>void DMA_IrqHandler (DMA_HandleTypeDef *hdma)
 
 the above irqhandler called when the data is received and this user defined irq also copies data from  DMA_RX_Buffer to UART_Buffer 
 
