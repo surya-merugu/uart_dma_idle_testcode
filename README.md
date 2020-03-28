@@ -29,5 +29,5 @@ after the above statement user can write his own callback.
 
 the above irqhandler called when the data is received and this user defined irq also copies data from  DMA_RX_Buffer to UART_Buffer 
 
-Note:- User defined callback is better to have in USART_IrqHandler(); because idle line is detected in this function and data is readily available in DMA_RX_Buffer and it is bit complicate to search the data in UART_Buffer
+**Note:- User defined callback is better to have in USART_IrqHandler(); because idle line is detected in this function and data is readily available in DMA_RX_Buffer and it is bit complicate to search the data in UART_Buffer
 
